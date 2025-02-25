@@ -3,17 +3,15 @@ import asyncio
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
 
-# Вставь сюда свой токен
+
 TOKEN = "7874386909:AAG80AW25VRVqrKNCf14lmlRv_ZTPvKaqiw"
 
-# Настраиваем логирование
+# Логирование
 logging.basicConfig(level=logging.INFO)
 
-# Создаём объект бота и диспетчер (он обрабатывает команды)
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
-# Команда /start
 @dp.message()
 async def start_command(message: Message):
     if message.text == "/start":
